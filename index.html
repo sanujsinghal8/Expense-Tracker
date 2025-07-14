@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💸 Smart Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💸 Smart Expense Tracker</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <section class="summary">
+      <div class="card">
+        <h3>Balance</h3>
+        <p id="balance">₹0</p>
+      </div>
+      <div class="card income">
+        <h4>Income</h4>
+        <p id="income">₹0</p>
+      </div>
+      <div class="card expense">
+        <h4>Expense</h4>
+        <p id="expense">₹0</p>
+      </div>
+    </section>
+
+    <form id="form">
+      <input type="text" id="text" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Salary</option>
+        <option>Other</option>
+      </select>
+
+      <input type="date" id="date" required />
+      <button type="submit">💾 Save Entry</button>
+    </form>
+
+    <ul id="list" class="transaction-list"></ul>
+
+    <canvas id="chart" height="120"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
